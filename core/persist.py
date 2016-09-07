@@ -2,7 +2,7 @@
 # @Author: captain
 # @Date:   2016-08-27 00:35:28
 # @Last Modified by:   captain
-# @Last Modified time: 2016-09-08 00:53:10
+# @Last Modified time: 2016-09-08 02:14:41
 
 from collections import defaultdict
 from copy import deepcopy
@@ -14,10 +14,6 @@ import sys
 from string import Template
 
 from . import util
-
-choose_cocos_project = None
-choose_cocos_project_name = None
-choose_cocos_project_index = None
 
 class Settings:
     """This class provides global access to and management of plugin settings."""

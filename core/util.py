@@ -2,7 +2,7 @@
 # @Author: captain
 # @Date:   2016-08-27 00:39:21
 # @Last Modified by:   captain
-# @Last Modified time: 2016-09-08 00:45:59
+# @Last Modified time: 2016-09-08 02:19:53
 
 from functools import lru_cache
 from glob import glob
@@ -65,9 +65,13 @@ def auto_generate_menu_key(projects):
     keymap_items = ',\n'.join(keymap_items)
 
     generate_menu('Main', menu_items)
-    generate_keymap('Windows', keymap_items, 'ctrl', 'alt')
-    generate_keymap('Linux', keymap_items, 'ctrl', 'alt')
-    generate_keymap('OSX', keymap_items, 'super', 'option')
+    sys_platform = sublime.platform()
+    if sys_platform == 'windows':
+        generate_keymap('Windows', keymap_items, 'ctrl', 'alt')
+    elif sys_platform == 'linux':
+        generate_keymap('Linux', keymap_items, 'ctrl', 'alt')
+    elif sys_platform == 'osx':
+        generate_keymap('OSX', keymap_items, 'super', 'option')
 
 def generate_menu(name, menu_text):
     """Generate and return a sublime-menu from a template."""
@@ -105,7 +109,8 @@ def generate_keymap(os_name, keymap_text, ctrl, alt):
 
     text = Template(template).safe_substitute({'keymaps': keymap_text})
     text = Template(text).safe_substitute({'ctrl': ctrl, 'alt': alt})
-    path = os.path.join(plugin_dir, 'Default ({}).sublime-keymap'.format(os_name))
+    user_setting_dir = os.path.join(sublime.packages_path(), "User")
+    path = os.path.join(user_setting_dir, 'SublimeCocos.sublime-keymap'.format(os_name))
     
     with open(path, mode='w', encoding='utf8') as f:
         f.write(text)
