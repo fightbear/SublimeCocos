@@ -2,7 +2,7 @@
 # @Author: captain
 # @Date:   2016-08-27 00:39:21
 # @Last Modified by:   captain
-# @Last Modified time: 2016-09-07 00:14:33
+# @Last Modified time: 2016-09-08 00:45:59
 
 from functools import lru_cache
 from glob import glob
@@ -142,3 +142,11 @@ def get_saved_project():
         project = f.read()
 
     return eval(project)
+
+def get_choose_cocos_project_name():
+    choose_cocos_project = get_saved_project() or {}
+    return choose_cocos_project.get('name')
+
+def get_choose_cocos_project_index():
+    choose_cocos_project = get_saved_project() or {}
+    return choose_cocos_project.get('index')

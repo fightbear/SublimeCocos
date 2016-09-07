@@ -2,7 +2,7 @@
 # @Author: captain
 # @Date:   2016-08-27 00:35:28
 # @Last Modified by:   captain
-# @Last Modified time: 2016-09-07 01:03:43
+# @Last Modified time: 2016-09-08 00:53:10
 
 from collections import defaultdict
 from copy import deepcopy
@@ -125,12 +125,6 @@ class Settings:
         gameProjectsPath = self.settings.get('game_projects_path')
         projects = self.settings.get('projects')
 
-        choose_cocos_project = util.get_saved_project() or {}
-        choose_cocos_project_name = choose_cocos_project.get('name')
-        choose_cocos_project_index = choose_cocos_project.get('index')
-        print("qq choose_cocos_project_name ", choose_cocos_project_name)
-        print("qq choose_cocos_project_index ", choose_cocos_project_index)
-
         util.PROJECT_DESC = []
         util.auto_generate_projects_desc(projects)
         util.auto_generate_menu_key(projects)
@@ -146,9 +140,6 @@ class Settings:
         """
 
         self.load()
-
-def gettest():
-    return choose_cocos_project_index
 
 if 'plugin_is_loaded' not in globals():
     settings = Settings()
