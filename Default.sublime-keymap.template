@@ -1,0 +1,23 @@
+[
+    {
+        "keys": ["$ctrl+$alt+l"],
+        "command": "launch_simulator"
+    },
+    {
+        "keys": ["$ctrl+$alt+p"],
+        "command": "processing_images"
+    },
+    {
+        "keys": ["$ctrl+$alt+e"],
+        "command": "export_configuration"
+    },
+    {
+        "keys": ["$ctrl+$alt+c"],
+        "command": "compile_script"
+    },
+    {
+        "keys": ["$ctrl+$alt+b"],
+        "command": "batch_packaging"
+    },
+    $keymaps
+]       

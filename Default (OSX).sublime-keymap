@@ -1,0 +1,32 @@
+[
+    {
+        "keys": ["super+option+l"],
+        "command": "launch_simulator"
+    },
+    {
+        "keys": ["super+option+p"],
+        "command": "processing_images"
+    },
+    {
+        "keys": ["super+option+e"],
+        "command": "export_configuration"
+    },
+    {
+        "keys": ["super+option+c"],
+        "command": "compile_script"
+    },
+    {
+        "keys": ["super+option+b"],
+        "command": "batch_packaging"
+    },
+    {
+        "keys": ["option+shift+1"],
+        "command": "switch_project_config",
+        "args": {"index":1, "value":"SiegeMaster"}
+    },
+    {
+        "keys": ["option+shift+2"],
+        "command": "switch_project_config",
+        "args": {"index":2, "value":"GuardStronghold"}
+    }
+]       
