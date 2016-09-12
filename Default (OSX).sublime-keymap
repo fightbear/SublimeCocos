@@ -1,32 +1,26 @@
 [
     {
-        "keys": ["super+option+l"],
+        "keys": ["shift+ctrl+l"],
         "command": "launch_simulator"
     },
     {
-        "keys": ["super+option+p"],
+        "keys": ["shift+ctrl+p"],
         "command": "processing_images"
     },
     {
-        "keys": ["super+option+e"],
+        "keys": ["shift+ctrl+e"],
         "command": "export_configuration"
     },
     {
-        "keys": ["super+option+c"],
+        "keys": ["shift+ctrl+c"],
         "command": "compile_script"
     },
     {
-        "keys": ["super+option+b"],
+        "keys": ["shift+ctrl+b"],
         "command": "batch_packaging"
     },
     {
-        "keys": ["option+shift+1"],
-        "command": "switch_project_config",
-        "args": {"index":1, "value":"SiegeMaster"}
-    },
-    {
-        "keys": ["option+shift+2"],
-        "command": "switch_project_config",
-        "args": {"index":2, "value":"GuardStronghold"}
+        "keys": ["shift+ctrl+m"],
+        "command": "generate_manifest"
     }
-]       
+] 

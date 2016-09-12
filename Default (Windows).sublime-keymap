@@ -1,22 +1,22 @@
 [
     {
-        "keys": ["ctrl+alt+l"],
+        "keys": ["shift+ctrl+l"],
         "command": "launch_simulator"
     },
     {
-        "keys": ["ctrl+alt+p"],
+        "keys": ["shift+ctrl+p"],
         "command": "processing_images"
     },
     {
-        "keys": ["ctrl+alt+e"],
+        "keys": ["shift+ctrl+e"],
         "command": "export_configuration"
     },
     {
-        "keys": ["ctrl+alt+c"],
+        "keys": ["shift+ctrl+c"],
         "command": "compile_script"
     },
     {
-        "keys": ["ctrl+alt+b"],
+        "keys": ["shift+ctrl+b"],
         "command": "batch_packaging"
     }
 ]       

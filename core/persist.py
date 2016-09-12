@@ -2,7 +2,7 @@
 # @Author: captain
 # @Date:   2016-08-27 00:35:28
 # @Last Modified by:   captain
-# @Last Modified time: 2016-09-08 02:14:41
+# @Last Modified time: 2016-09-13 00:54:38
 
 from collections import defaultdict
 from copy import deepcopy
@@ -114,16 +114,11 @@ class Settings:
         if ('projects' in self.changeset or (self.previous_settings.get('projects') != self.settings.get('projects'))):
             self.changeset.discard('projects')
 
-        cocosPath = self.settings.get('cocos_path')
-        cocosSimulatorPath = self.settings.get('cocos_simulator_path')
-        gameDocPath = self.settings.get('game_doc_path')
-        gameArtsPath = self.settings.get('game_arts_path')
-        gameProjectsPath = self.settings.get('game_projects_path')
         projects = self.settings.get('projects')
 
         util.PROJECT_DESC = []
         util.auto_generate_projects_desc(projects)
-        util.auto_generate_menu_key(projects)
+        util.auto_generate_menu(projects)
 
     def save(self, view=None):
         """

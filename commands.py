@@ -2,7 +2,7 @@
 # @Author: captain
 # @Date:   2016-09-08 00:28:36
 # @Last Modified by:   captain
-# @Last Modified time: 2016-09-08 00:52:29
+# @Last Modified time: 2016-09-13 00:51:32
 
 import sublime
 import sublime_plugin
@@ -10,9 +10,10 @@ import sublime_plugin
 import os
 import json
 from string import Template
-import subprocess
 
 from .core import persist, util
+from .core.simulator import *
+from .core.manifest import *
 
 class ChooseSettingCommand(sublime_plugin.WindowCommand):
     """An abstract base class for commands that choose a setting from a list."""
@@ -202,44 +203,34 @@ class LaunchSimulatorCommand(sublime_plugin.TextCommand):
     """A plugin command used to generate an edit object for a view."""
     def run(self, edit):
         """Run the command."""
-        choose_cocos_project_index = util.get_choose_cocos_project_index()
-        if choose_cocos_project_index < 0:
-            print("warning：no choosed project!!!")
-            return
+        launch_simulator()
 
-        cocos_simulator_path = persist.settings.get("cocos_simulator_path", None)
-        if not cocos_simulator_path or not os.path.exists(cocos_simulator_path):
-            print("warning：not find cocos simulator path!!!")
-            return
+class ProcessingImagesCommand(sublime_plugin.TextCommand):
+    """A plugin command used to generate an edit object for a view."""
+    def run(self, edit):
+        """Run the command."""
+        print("ProcessingImagesCommand")
 
-        game_projects_path = persist.settings.get("game_projects_path", None)
-        if not game_projects_path or not os.path.exists(game_projects_path):
-            print("warning：not find cocos projects path!!!")
-            return
+class ExportConfigurationCommand(sublime_plugin.TextCommand):
+    """A plugin command used to generate an edit object for a view."""
+    def run(self, edit):
+        """Run the command."""
+        print("ExportConfigurationCommand")
 
-        projects = persist.settings.get("projects")
-        if not projects:
-            print("warning：no projects data!!!")
-            return
+class CompileScriptCommand(sublime_plugin.TextCommand):
+    """A plugin command used to generate an edit object for a view."""
+    def run(self, edit):
+        """Run the command."""
+        print("CompileScriptCommand")
 
-        project = projects[choose_cocos_project_index]
-        if not project:
-            print("warning: no setting project for projects!!!")
-            return
+class BatchPackagingCommand(sublime_plugin.TextCommand):
+    """A plugin command used to generate an edit object for a view."""
+    def run(self, edit):
+        """Run the command."""
+        print("BatchPackagingCommand")
 
-        projectName = project['name']
-        project_path = os.path.join(game_projects_path, str(projectName))
-        if not project_path or not os.path.exists(project_path):
-            print("warning：not find project name!!!")
-            return
-
-        projectSrc = project['src']
-        project_src_dir = os.path.join(project_path, str(projectSrc))
-        if not project_src_dir or not os.path.exists(project_src_dir):
-            print("warning：not find project src dir!!!")
-            return
-
-        os.chdir(project_path)
-        launch_arg = " -workdir " + project_path + " -search-path " + project_src_dir
-        launch_cmd= cocos_simulator_path + launch_arg
-        subprocess.Popen(launch_cmd,stdout=subprocess.PIPE,stderr=subprocess.PIPE, shell=True)
+class GenerateManifestCommand(sublime_plugin.TextCommand):
+    """A plugin command used to generate an edit object for a view."""
+    def run(self, edit):
+        """Run the command."""
+        gen_manifest()
