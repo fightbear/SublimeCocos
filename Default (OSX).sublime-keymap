@@ -1,26 +1,29 @@
 [
     {
-        "keys": ["shift+ctrl+l"],
-        "command": "launch_simulator"
-    },
+        "command": "simulator", 
+        "keys": [
+            "ctrl+super+."
+        ]
+    }, 
     {
-        "keys": ["shift+ctrl+p"],
-        "command": "processing_images"
-    },
+        "command": "build_android", 
+        "keys": [
+            "ctrl+super+["
+        ]
+    }, 
     {
-        "keys": ["shift+ctrl+e"],
-        "command": "export_configuration"
-    },
+        "command": "build_ios", 
+        "keys": [
+            "ctrl+super+]"
+        ]
+    }, 
     {
-        "keys": ["shift+ctrl+c"],
-        "command": "compile_script"
-    },
-    {
-        "keys": ["shift+ctrl+b"],
-        "command": "batch_packaging"
-    },
-    {
-        "keys": ["shift+ctrl+m"],
-        "command": "generate_manifest"
+        "args": {
+            "project_tag": 0
+        }, 
+        "command": "choose_project", 
+        "keys": [
+            "alt+shift+1"
+        ]
     }
-] 
+]

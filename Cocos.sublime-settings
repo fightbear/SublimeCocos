@@ -1,0 +1,20 @@
+{
+    "java_home": "",
+    "ant_root": "",
+    "android_sdk_root": "",
+    "android_ndk_root": "",
+
+    "cocos_engine_path": "/Users/captain/Repos/CloudShipGame/client-engine",
+    "simulator_path": "/Users/captain/Repos/CloudShipGame/client-engine/tools/simulator/runtime/mac/Simulator.app/Contents/MacOS/Simulator",
+    "studio": [
+        {
+            "projectName": "Doudizhu1",
+            "projectPath": "/Users/captain/Repos/CloudShipGame/Doudizhu1",
+            "docsPath": "/Users/captain/Repos/CloudShipGame/Doudizhu/ddz-docs",
+            "artsPath": "/Users/captain/Repos/CloudShipGame/Doudizhu/ddz-arts",
+            "clientPath": "/Users/captain/Repos/CloudShipGame/Doudizhu/ddz-client",
+            "serverPath": "/Users/captain/Repos/CloudShipGame/Doudizhu/ddz-server",
+            "scriptPath": "/Users/captain/Repos/CloudShipGame/Doudizhu/ddz-client/src"
+        }
+    ]
+}

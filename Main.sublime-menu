@@ -1,120 +1,96 @@
 [
     {
-        "caption": "Tools",
-        "id": "tools",
-        "children":
-        [
+        "id": "preferences", 
+        "caption": "Preferences", 
+        "mnemonic": "n", 
+        "children": [
             {
-                "id": "sublimecocos",
-                "caption": "SublimeCocos",
-                "children":
-                [
+                "id": "package-settings", 
+                "caption": "Package Settings", 
+                "mnemonic": "p", 
+                "children": [
                     {
-                        "caption": "Projects",
-                        "children":
-                        [
+                        "id": "sublimecocos", 
+                        "caption": "SublimeCocos", 
+                        "mnemonic": null, 
+                        "children": [
                             {
-                                "caption": "SiegeMaster",
-                                "command": "switch_project_config",
-                                "args": {"index": 1, "value":"SiegeMaster"}
-                            },
+                                "command": "open_file", 
+                                "caption": "Settings \u2013 Default", 
+                                "args": {
+                                    "file": "${packages}/SublimeCocos/Cocos.sublime-settings"
+                                }
+                            }, 
                             {
-                                "caption": "GuardStronghold",
-                                "command": "switch_project_config",
-                                "args": {"index": 2, "value":"GuardStronghold"}
+                                "command": null, 
+                                "caption": "-"
+                            }, 
+                            {
+                                "command": "open_file", 
+                                "caption": "Key Bindings \u2013 Default", 
+                                "args": {
+                                    "file": "${packages}/SublimeCocos/Default (OSX).sublime-keymap", 
+                                    "platform": "OSX"
+                                }
+                            }, 
+                            {
+                                "command": "open_file", 
+                                "caption": "Key Bindings \u2013 Default", 
+                                "args": {
+                                    "file": "${packages}/SublimeCocos/Default (Linux).sublime-keymap", 
+                                    "platform": "Linux"
+                                }
+                            }, 
+                            {
+                                "command": "open_file", 
+                                "caption": "Key Bindings \u2013 Default", 
+                                "args": {
+                                    "file": "${packages}/SublimeCocos/Default (Windows).sublime-keymap", 
+                                    "platform": "Windows"
+                                }
                             }
                         ]
                     }
                 ]
             }
         ]
-        
-    },
-
+    }, 
     {
-        "caption": "Preferences",
-        "id": "preferences",
-        "mnemonic": "n",
-        "children":
-        [
+        "id": "cocos", 
+        "caption": "Cocos", 
+        "mnemonic": null, 
+        "children": [
             {
-                "caption": "Package Settings",
-                "id": "package-settings",
-                "mnemonic": "P",
-                "children":
-                [
-                    {
-                        "caption": "SublimeCocos",
-                        "children":
-                        [
-                            {
-                                "caption": "Settings – Default",
-                                "command": "open_file", "args":
-                                {
-                                    "file": "${packages}/SublimeCocos/SublimeCocos.sublime-settings"
-                                }
-                            },
-                            {
-                                "caption": "Settings – User",
-                                "command": "open_file", "args":
-                                {
-                                    "file": "${packages}/User/SublimeCocos.sublime-settings"
-                                }
-                            },
-                            {
-                                "caption": "-"
-                            },
-                            {
-                                "caption": "Key Bindings – Default",
-                                "command": "open_file", "args":
-                                {
-                                    "file": "${packages}/SublimeCocos/Default (OSX).sublime-keymap",
-                                    "platform": "OSX"
-                                }
-                            },
-                            {
-                                "caption": "Key Bindings – User",
-                                "command": "open_file", "args":
-                                {
-                                    "file": "${packages}/User/Default (OSX).sublime-keymap",
-                                    "platform": "OSX"
-                                }
-                            },
-                            {
-                                "caption": "Key Bindings – Default",
-                                "command": "open_file", "args":
-                                {
-                                    "file": "${packages}/SublimeCocos/Default (Linux).sublime-keymap",
-                                    "platform": "Linux"
-                                }
-                            },
-                            {
-                                "caption": "Key Bindings – User",
-                                "command": "open_file", "args":
-                                {
-                                    "file": "${packages}/User/Default (Linux).sublime-keymap",
-                                    "platform": "Linux"
-                                }
-                            },
-                            {
-                                "caption": "Key Bindings – Default",
-                                "command": "open_file", "args":
-                                {
-                                    "file": "${packages}/SublimeCocos/Default (Windows).sublime-keymap",
-                                    "platform": "Windows"
-                                }
-                            },
-                            {
-                                "caption": "Key Bindings – User",
-                                "command": "open_file", "args":
-                                {
-                                    "file": "${packages}/User/Default (Windows).sublime-keymap",
-                                    "platform": "Windows"
-                                }
-                            }
-                        ]
-                    }
-                ]
+                "checkbox": true, 
+                "command": "choose_project", 
+                "caption": "Doudizhu1", 
+                "args": {
+                    "project_tag": 0
+                }
+            }, 
+            {
+                "command": null, 
+                "caption": "-"
+            }, 
+            {
+                "command": "simulator", 
+                "caption": "Simulator"
+            }, 
+            {
+                "command": "build_ios", 
+                "caption": "Build (iOS)"
+            }, 
+            {
+                "command": "build_android", 
+                "caption": "Build (Android)"
+            }, 
+            {
+                "command": null, 
+                "caption": "-"
+            }, 
+            {
+                "command": "about", 
+                "caption": "About"
             }
         ]
     }
